@@ -17,7 +17,6 @@ namespace CompanyManage
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
-            List<Product> products = new List<Product>();
         }
     }
 }
