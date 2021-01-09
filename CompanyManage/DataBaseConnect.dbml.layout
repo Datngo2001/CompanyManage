@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 9.375" name="DataBaseConnect">
+  <DataContextMoniker Name="/DataBaseConnectDataContext" />
+  <nestedChildShapes>
+    <classShape Id="5b6beab3-8449-4053-a0cf-2599c28ee4df" absoluteBounds="0.75, 0.75, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/DataBaseConnectDataContext/DIADIEM_PHONG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f74942fe-d7db-4bcd-b9e6-93f69497bafb" absoluteBounds="0.765, 1.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="990532cb-0eec-48d4-9088-8bd3d9e87e58" absoluteBounds="0.75, 2.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DataBaseConnectDataContext/DUAN" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7aad20d3-6833-4496-9309-6f3804bbf64f" absoluteBounds="0.765, 3.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="54a42386-9e7c-4a9d-b244-43a16d482f8e" absoluteBounds="3.5, 5.875, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/DataBaseConnectDataContext/NhanVien" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ca55c6cf-f3f6-4bc5-89a2-0bd6c5993a49" absoluteBounds="3.515, 6.3350000000000009, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="17ffe888-f6da-4f84-81c6-f0859c521f99" absoluteBounds="0.625, 5.5, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/DataBaseConnectDataContext/ThanNhan" />
+      <nestedChildShapes>
+        <elementListCompartment Id="53cf8f04-dc09-490c-9b4f-12add1421352" absoluteBounds="0.63999999999999968, 5.9600000000000009, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d339b042-0b41-4fef-bf20-775de42cd237" absoluteBounds="4.375, 3.875, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/DataBaseConnectDataContext/PhanCong" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6f0b1dd7-f4ce-46f4-981e-4bd6bcd61dbf" absoluteBounds="4.39, 4.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="39d4e54b-f5be-4ca5-9c29-90afc57b5146" absoluteBounds="5.5, 0.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DataBaseConnectDataContext/PhongBan" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3c59dc56-e7b9-4d04-b89d-0bcbdc3cad75" absoluteBounds="5.515, 1.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.20923076923077 : 8.60740397135417); (4.20923076923077 : 8.85740397135417); (4.80461538461539 : 8.85740397135417); (4.80461538461539 : 8.60740397135417)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataBaseConnectDataContext/NhanVien/NhanVien_NhanVien" />
+      <nodes>
+        <classShapeMoniker Id="54a42386-9e7c-4a9d-b244-43a16d482f8e" />
+        <classShapeMoniker Id="54a42386-9e7c-4a9d-b244-43a16d482f8e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.5 : 6.57294840494792); (2.625 : 6.57294840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataBaseConnectDataContext/NhanVien/NhanVien_ThanNhan" />
+      <nodes>
+        <classShapeMoniker Id="54a42386-9e7c-4a9d-b244-43a16d482f8e" />
+        <classShapeMoniker Id="17ffe888-f6da-4f84-81c6-f0859c521f99" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.10179768880208); (4.375 : 4.10179768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataBaseConnectDataContext/DUAN/DUAN_PhanCong" />
+      <nodes>
+        <classShapeMoniker Id="990532cb-0eec-48d4-9088-8bd3d9e87e58" />
+        <classShapeMoniker Id="d339b042-0b41-4fef-bf20-775de42cd237" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.9375 : 5.875); (4.9375 : 5.2612939453125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataBaseConnectDataContext/NhanVien/NhanVien_PhanCong" />
+      <nodes>
+        <classShapeMoniker Id="54a42386-9e7c-4a9d-b244-43a16d482f8e" />
+        <classShapeMoniker Id="d339b042-0b41-4fef-bf20-775de42cd237" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 1.34699625651042); (2.75 : 1.34699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataBaseConnectDataContext/PhongBan/PhongBan_DIADIEM_PHONG" />
+      <nodes>
+        <classShapeMoniker Id="39d4e54b-f5be-4ca5-9c29-90afc57b5146" />
+        <classShapeMoniker Id="5b6beab3-8449-4053-a0cf-2599c28ee4df" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.96875 : 2.32859537760417); (6.96875 : 3.28125); (2.75 : 3.28125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataBaseConnectDataContext/PhongBan/PhongBan_DUAN" />
+      <nodes>
+        <classShapeMoniker Id="39d4e54b-f5be-4ca5-9c29-90afc57b5146" />
+        <classShapeMoniker Id="990532cb-0eec-48d4-9088-8bd3d9e87e58" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.98303768617591 : 2.32859537760417); (6.98303768617591 : 7.24120198567708); (5.5 : 7.24120198567708)]" fixedFrom="Caller" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataBaseConnectDataContext/PhongBan/PhongBan_NhanVien" />
+      <nodes>
+        <classShapeMoniker Id="39d4e54b-f5be-4ca5-9c29-90afc57b5146" />
+        <classShapeMoniker Id="54a42386-9e7c-4a9d-b244-43a16d482f8e" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
