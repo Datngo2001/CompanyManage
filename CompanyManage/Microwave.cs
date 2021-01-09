@@ -20,10 +20,9 @@ namespace CompanyManage
             get { return wattage; }
             set { if (wattage > 0) wattage = value; }
         }
-        
         private string idPreFix = "CP";
-        public Microwave(string id = "", string name = "", string brand = "", string madeIn = "", uint warranty = 0, uint amount = 0,
-            int capacity = 0, int wattage = 0) : base(id, name, brand, madeIn, warranty, amount)
+        public Microwave(string id = "", string name = "", string brand = "", string madeIn = "", uint warranty = 0, uint amount = 0, decimal capital = 0, decimal profit = 0,
+            int capacity = 0, int wattage = 0) : base(id, name, brand, madeIn, warranty, amount, capital, profit)
         {
             try
             {

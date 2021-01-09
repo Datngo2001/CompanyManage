@@ -12,9 +12,34 @@ namespace CompanyManage
         public string Name { get; set; }
         public string Brand { get; set; }
         public string MadeIn { get; set; }
-        public decimal Capital { get; set; }
-        public decimal Profit { get; set; }
-        public decimal Price { get; set; }
+        private decimal capital = 0;
+        public decimal Capital
+        {
+            get { return capital; }
+            set
+            {
+                if(value > 0)
+                {
+                    capital = value;
+                    Price = Capital + Profit;
+                }
+            }
+        }
+        private decimal profit = 0;
+        public decimal Profit
+        {
+            get { return profit; }
+            set
+            {
+                if (value > 0)
+                {
+                    profit = value;
+                    Price = Capital + Profit;
+                }
+            }
+        }
+
+        public decimal Price { get; protected set; }
         protected uint maxWarranty = 10;
         protected uint warranty = 0;
         public uint Warranty
@@ -40,7 +65,8 @@ namespace CompanyManage
                 }
             }
         }
-        public Product(string id = "", string name = "", string brand = "", string madeIn = "", uint warranty = 0, uint amount = 0)
+        public Product(string id = "", string name = "", string brand = "", 
+            string madeIn = "", uint warranty = 0, uint amount = 0, decimal capital = 0, decimal profit = 0)
         {
             try
             {
@@ -50,6 +76,8 @@ namespace CompanyManage
                 MadeIn = madeIn;
                 Warranty = warranty;
                 Amount = amount;
+                Capital = capital;
+                Profit = profit;
             }
             catch (Exception)
             {
