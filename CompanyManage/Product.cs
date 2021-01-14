@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CompanyManage
 {
@@ -38,16 +36,14 @@ namespace CompanyManage
                 }
             }
         }
-
         public decimal Price { get; protected set; }
-        protected uint maxWarranty = 10;
         protected uint warranty = 0;
         public uint Warranty
         {
             get { return warranty; }
             set
             {
-                if(0 <= value && value <= 10)
+                if(0 <= value)
                 {
                     warranty = value;
                 }
@@ -65,13 +61,15 @@ namespace CompanyManage
                 }
             }
         }
-        public Product(string id = "", string name = "", string brand = "", 
+        public string Color { get; set; }
+        public Product(string id = "", string name = "", string color = "", string brand = "", 
             string madeIn = "", uint warranty = 0, uint amount = 0, decimal capital = 0, decimal profit = 0)
         {
             try
             {
                 ID = id;
                 Name = name;
+                Color = color;
                 Brand = brand;
                 MadeIn = madeIn;
                 Warranty = warranty;
@@ -92,6 +90,5 @@ namespace CompanyManage
         {
 
         }
-        //public static decimal operator +=(Product.Capital a,  )
     }
 }

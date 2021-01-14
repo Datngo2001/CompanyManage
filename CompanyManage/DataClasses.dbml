@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="StoreDatabase" Class="DataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\StoreDatabase.mdf;Integrated Security=True;Connect Timeout=30" SettingsObjectName="CompanyManage.Properties.Settings" SettingsPropertyName="StoreDatabaseConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ProductTable" Member="ProductTables">
+    <Type Name="ProductTable">
+      <Column Name="ID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Brand" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="MadeIn" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Capital" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Profit" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Price" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Warranty" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Amount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ProductTable_CellPhoneTable" Member="CellPhoneTable" ThisKey="ID" OtherKey="IDCellPhone" Type="CellPhoneTable" Cardinality="One" />
+      <Association Name="ProductTable_LaptopTable" Member="LaptopTable" ThisKey="ID" OtherKey="IDLaptop" Type="LaptopTable" Cardinality="One" />
+      <Association Name="ProductTable_TiviTable" Member="TiviTable" ThisKey="ID" OtherKey="IDTivi" Type="TiviTable" Cardinality="One" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CellPhoneTable" Member="CellPhoneTables">
+    <Type Name="CellPhoneTable">
+      <Column Name="IDCellPhone" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Ram" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Pin" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ScreenSize" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="ProductTable_CellPhoneTable" Member="ProductTable" ThisKey="IDCellPhone" OtherKey="ID" Type="ProductTable" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LaptopTable" Member="LaptopTables">
+    <Type Name="LaptopTable">
+      <Column Name="IDLaptop" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Ram" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Chip" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Pin" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ProductTable_LaptopTable" Member="ProductTable" ThisKey="IDLaptop" OtherKey="ID" Type="ProductTable" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TiviTable" Member="TiviTables">
+    <Type Name="TiviTable">
+      <Column Name="IDTivi" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Size" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="ScreenTechnology" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="ProductTable_TiviTable" Member="ProductTable" ThisKey="IDTivi" OtherKey="ID" Type="ProductTable" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
